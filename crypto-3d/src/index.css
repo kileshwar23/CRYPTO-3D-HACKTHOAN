@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 10 20 26;
+    --foreground: 255 255 255;
+
+    --card: 30 41 59;
+    --card-foreground: 255 255 255;
+
+    --popover: 30 41 59;
+    --popover-foreground: 255 255 255;
+
+    --primary: 0 255 136;
+    --primary-foreground: 10 20 26;
+
+    --secondary: 51 65 85;
+    --secondary-foreground: 255 255 255;
+
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+
+    --accent: 0 255 136;
+    --accent-foreground: 10 20 26;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 0 255 136;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 41 59;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 0 255 136;
+    --sidebar-primary-foreground: 10 20 26;
+    --sidebar-accent: 51 65 85;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 51 65 85;
+    --sidebar-ring: 0 255 136;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-crypto-dark text-white font-poppins;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .neumorphic {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    box-shadow: 
+      20px 20px 60px #0a0e1a,
+      -20px -20px 60px #334155;
+  }
+  
+  .neumorphic-inset {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    box-shadow: 
+      inset 20px 20px 60px #0a0e1a,
+      inset -20px -20px 60px #334155;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
